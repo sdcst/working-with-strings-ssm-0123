@@ -9,6 +9,8 @@ this function returns the length of the string
 (2 points)
 '''
 
+
+
 def split(input):
     '''
     parameters
@@ -18,7 +20,23 @@ def split(input):
     str new string with line break in the middle
     '''
 
-    return
+    x = input
+    print(len(x))
+    s1 = x[:len(x)//2]
+    s2 = x[len(x)//2:]
+    print(s1,s2)
+    print(len(s1),len(s2))
+    print(s1[-1:])
+    if s1[-1:] == " ":
+        re = s1+"\n"+s2 
+    else:
+        if s2[0] == " ":
+            re = s1+"\n"+s2
+        else:
+            re = s1+"-\n"+s2
+    print(re)
+    return re
+
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
