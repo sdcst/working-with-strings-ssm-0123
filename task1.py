@@ -16,8 +16,27 @@ def replaceDog(input):
     str - the modified string
     '''
     modifiedString = input
+    modifiedString = modifiedString.split(' ')
+    for i in range(0,len(modifiedString)):
+        if modifiedString[i] == "dog":
+            modifiedString[i] = "kitty"
+    modifiedStringFinal = ""
+    a = len(modifiedString)-1
+    for i in range(0,len(modifiedString)):
+        modifiedStringFinal = modifiedStringFinal + modifiedString[i]
+        if i < a :
+            modifiedStringFinal = modifiedStringFinal +" "
+    
 
-    return modifiedString
+    
+
+
+
+    return modifiedStringFinal
+
+
+
+
 
 
 if __name__ == "__main__":
@@ -31,3 +50,4 @@ if __name__ == "__main__":
 
     x = 'i have a dog and a goldfish as my pets'
     assert replaceDog(x) == 'i have a kitty and a goldfish as my pets'
+
